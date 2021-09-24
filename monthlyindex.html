@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVI-STATS- Monthly Stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="css/stylemonthly.css">
+    <link rel="shortcut icon" href="https://www.coar-repositories.org/files/covid-19-4996393_1280.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main_heading">
+        <h1>Covi-Stats</h1>
+        <h4>Check   <span class="highlight"> COVID-19</span> stats including    <span class="highlight">Delta variant </span>stats here</h4>
+        <div class="delta_variant_link"><a href="deltaindex.html">Check <span class="highlight">Delta Delta Variant</span> Stats Here</a></div>
+        <div class="main_page_link"><a href="index.html">Return to main page</a></div>
+    </div>
+    <div class="main_content">
+        <div class="first_chart">
+            <canvas id="horizontalbar"></canvas>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="mention">Made by <span> Soham kayal</span></div>
+        <div class="social">
+            <div class="insta_handle"><a href="https://www.instagram.com/sohamkayal/"><i class="fab fa-instagram-square"></i>Instagram</a></div>
+            <div class="linked_in"><a href="https://www.linkedin.com/in/soham-kayal-90939720b/"><i class="fab fa-linkedin"></i>Linked IN</a></div>
+            <div class="github_link"><a href="https://github.com/Sohamkayal4103"><i class="fab fa-github-square"></i>Github</a></div>
+        </div>
+    </div>
+    <script src="js/monthlymain.js"></script>
+    <!-- <script>
+        let dataset2=[];
+        let dataset1=[];
+        let dataset3=[];
+        let j=1,i=0;
+        async function getDummyData() {
+            const apiUrl = "https://data.covid19india.org/data.json";
+            const response = await fetch(apiUrl);
+            const barChatData = await response.json();
+            const arrdata=[barChatData];
+            console.log(arrdata);
+            while(j<20){
+            dataset1[i]=arrdata.map((x) => x.cases_time_series[i].date);
+            i=i+30;
+            j++;
+            }
+            console.log(dataset1);
+        }
+        getDummyData();
+        
+    </script> -->
+</body>
+</html>
